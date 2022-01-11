@@ -10,33 +10,44 @@
 <body>
     <header class="container">
         <!-- a tag for score html -->
-        <a href="./score.html" align="left">View Highscores</a>
+        <a class="score" href="./score.html" align="left">View Highscores</a>
         <!-- timer -->
-        <div align="right">
+        <div class="timer" align="right">
             <h3 id="countdown"></h3>
         </div>
     </header>
 
-    <div id="home" class="flex-column flex-center">
-        <!-- h1 with name -->
-        <h1>Paragraph with explanation</h1>
+    <main>
+    <div id="home" class="flex-column">
+        <!-- h2 with name -->
+        <h2>Code Quiz Rules</h2>
+        <div class="info">You will have only <strong>60 seconds</strong> to complete the quizz.</div>
+        <div class="info">You will get 5 points for each correct answer.</div>
+        <div class="info">You will get 5 seconds penalty for each wrong answer.</div>
+        <div class="info">You can't change your answer. Clicking on an answer will record it and take you to the next question.</div>
+        <div class="info">You can't exit from the Quiz before the time is over or you answer all questions.</div>
+        <div class="info">You will see your score at the end of the quiz and will have the option to save it.</div>
         <!--  button -->
+        <div>
+            <button class="button" id="start">Start Game</button>
+        </div>
     </div>
 
-    <!-- div to dynamically rendered sec w/ js; both Q&A -->
-    <!-- add-on for correct and wrong -->
-    <div id=quiz></div>
-        <p2 id=quizQuestion>Dummy Question</p2>
-        <button id="submitA">Dummy option A</button>
-        <button id="submitB">Dummy option B</button>
-        <button id="submitC">Dummy option C</button>
-        <button id="submitD">Dummy option D</button>
-    <div>
-        
+    <!-- div to dynamically get rendered sec w/ js; both Q&A -->
+    <!-- future add-on for correct and wrong -->
+    <div id=quiz class="flex-column">
+        <h2 id=quizQuestion>Dummy Question</h2>
+        <div><button class="button choice-text" id="choice1" data-number="1">Dummy option A</button></div>
+        <div><button class="button choice-text" id="choice2" data-number="2">Dummy option B</button></div>
+        <div><button class="button choice-text" id="choice3" data-number="3">Dummy option C</button></div>
+        <div><button class="button choice-text" id="choice4" data-number="4">Dummy option D</button></div>
     </div>
-    <div id=results>
+        
+    
+    <div id=results class="flex-column">
         <!-- All Done + score + enter inits field + button -->
     </div>
-    <script src="./assets/js/script.js"></script>
+  </main>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
